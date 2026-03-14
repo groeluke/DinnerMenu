@@ -1,6 +1,6 @@
 ﻿namespace DinnerMenu
 {
-    partial class Form1
+    partial class DinerSpecialMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,67 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            SoupButton = new Button();
+            SaladButton = new Button();
+            FishButton = new Button();
+            ExitButton = new Button();
+            DinerNameLabel = new Label();
+            ButtonsGroupBox = new GroupBox();
+            DisplaySpecialLabel = new Label();
+            ButtonsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // SoupButton
             // 
-            button1.Location = new Point(12, 362);
-            button1.Name = "button1";
-            button1.Size = new Size(144, 76);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            SoupButton.Location = new Point(0, 9);
+            SoupButton.Name = "SoupButton";
+            SoupButton.Size = new Size(144, 76);
+            SoupButton.TabIndex = 1;
+            SoupButton.Text = "Soup";
+            SoupButton.UseVisualStyleBackColor = true;
+            SoupButton.Click += SoupButton_Click;
             // 
-            // button2
+            // SaladButton
             // 
-            button2.Location = new Point(162, 362);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 76);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            SaladButton.Location = new Point(150, 9);
+            SaladButton.Name = "SaladButton";
+            SaladButton.Size = new Size(144, 76);
+            SaladButton.TabIndex = 2;
+            SaladButton.Text = "Salad";
+            SaladButton.UseVisualStyleBackColor = true;
+            SaladButton.Click += SaladButton_Click;
             // 
-            // button3
+            // FishButton
             // 
-            button3.Location = new Point(312, 362);
-            button3.Name = "button3";
-            button3.Size = new Size(144, 76);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            FishButton.Location = new Point(300, 11);
+            FishButton.Name = "FishButton";
+            FishButton.Size = new Size(144, 76);
+            FishButton.TabIndex = 3;
+            FishButton.Text = "Fish";
+            FishButton.UseVisualStyleBackColor = true;
+            FishButton.Click += FishButton_Click;
             // 
-            // button4
+            // ExitButton
             // 
-            button4.Location = new Point(644, 362);
-            button4.Name = "button4";
-            button4.Size = new Size(144, 76);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            ExitButton.Location = new Point(632, 9);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(144, 76);
+            ExitButton.TabIndex = 4;
+            ExitButton.Text = "E&xit";
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
             // 
-            // Form1
+            // DinerNameLabel
+            // 
+            DinerNameLabel.AutoSize = true;
+            DinerNameLabel.Font = new Font("Gabriola", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DinerNameLabel.Location = new Point(251, 9);
+            DinerNameLabel.Name = "DinerNameLabel";
+            DinerNameLabel.Size = new Size(301, 96);
+            DinerNameLabel.TabIndex = 4;
+            DinerNameLabel.Text = "~Surf The Turf~";
+            DinerNameLabel.Click += DinerLabel_Click;
+            // 
+            // ButtonsGroupBox
+            // 
+            ButtonsGroupBox.Controls.Add(ExitButton);
+            ButtonsGroupBox.Controls.Add(FishButton);
+            ButtonsGroupBox.Controls.Add(SaladButton);
+            ButtonsGroupBox.Controls.Add(SoupButton);
+            ButtonsGroupBox.Location = new Point(12, 357);
+            ButtonsGroupBox.Name = "ButtonsGroupBox";
+            ButtonsGroupBox.Size = new Size(783, 89);
+            ButtonsGroupBox.TabIndex = 0;
+            ButtonsGroupBox.TabStop = false;
+            // 
+            // DisplaySpecialLabel
+            // 
+            DisplaySpecialLabel.AutoSize = true;
+            DisplaySpecialLabel.Font = new Font("Gabriola", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DisplaySpecialLabel.Location = new Point(271, 105);
+            DisplaySpecialLabel.Name = "DisplaySpecialLabel";
+            DisplaySpecialLabel.Size = new Size(0, 51);
+            DisplaySpecialLabel.TabIndex = 0;
+            // 
+            // DinerSpecialMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "Form1";
-            Text = "Form1";
+            Controls.Add(DisplaySpecialLabel);
+            Controls.Add(ButtonsGroupBox);
+            Controls.Add(DinerNameLabel);
+            Name = "DinerSpecialMenu";
+            Text = "Surf The Turf Diner Special Menu";
+            Load += DinerSpecialMenu_Load;
+            ButtonsGroupBox.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button SoupButton;
+        private Button SaladButton;
+        private Button FishButton;
+        private Button ExitButton;
+        private Label DinerNameLabel;
+        private GroupBox ButtonsGroupBox;
+        private Label DisplaySpecialLabel;
     }
 }
