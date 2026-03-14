@@ -35,6 +35,7 @@
             DinerNameLabel = new Label();
             ButtonsGroupBox = new GroupBox();
             DisplaySpecialLabel = new Label();
+            DisplayDinnerLabel = new Label();
             ButtonsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -105,16 +106,26 @@
             // 
             DisplaySpecialLabel.AutoSize = true;
             DisplaySpecialLabel.Font = new Font("Gabriola", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DisplaySpecialLabel.Location = new Point(271, 105);
+            DisplaySpecialLabel.Location = new Point(268, 85);
             DisplaySpecialLabel.Name = "DisplaySpecialLabel";
             DisplaySpecialLabel.Size = new Size(0, 51);
             DisplaySpecialLabel.TabIndex = 0;
+            // 
+            // DisplayDinnerLabel
+            // 
+            DisplayDinnerLabel.AutoSize = true;
+            DisplayDinnerLabel.Font = new Font("Gabriola", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DisplayDinnerLabel.Location = new Point(154, 131);
+            DisplayDinnerLabel.Name = "DisplayDinnerLabel";
+            DisplayDinnerLabel.Size = new Size(0, 45);
+            DisplayDinnerLabel.TabIndex = 5;
             // 
             // DinerSpecialMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(DisplayDinnerLabel);
             Controls.Add(DisplaySpecialLabel);
             Controls.Add(ButtonsGroupBox);
             Controls.Add(DinerNameLabel);
@@ -135,5 +146,6 @@
         private Label DinerNameLabel;
         private GroupBox ButtonsGroupBox;
         private Label DisplaySpecialLabel;
+        private Label DisplayDinnerLabel;
     }
 }
