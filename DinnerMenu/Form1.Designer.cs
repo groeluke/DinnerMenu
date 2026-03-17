@@ -1,4 +1,12 @@
-﻿namespace DinnerMenu
+﻿/*Luke Groesbeck
+Spring 2026
+RCET 2265
+Project DinnerMenu
+Computer Fundamentals and Introduction to Programming
+https://github.com/groeluke/DinnerMenu.git
+*/
+
+namespace DinnerMenu
 {
     partial class DinerSpecialMenu
     {
