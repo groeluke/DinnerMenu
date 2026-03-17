@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             SoupButton = new Button();
             SaladButton = new Button();
             FishButton = new Button();
@@ -36,6 +37,7 @@
             ButtonsGroupBox = new GroupBox();
             DisplaySpecialLabel = new Label();
             DisplayDinnerLabel = new Label();
+            MainToolTip = new ToolTip(components);
             ButtonsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,6 +48,7 @@
             SoupButton.Size = new Size(144, 76);
             SoupButton.TabIndex = 1;
             SoupButton.Text = "Soup";
+            MainToolTip.SetToolTip(SoupButton, "See what Soup we have today.");
             SoupButton.UseVisualStyleBackColor = true;
             SoupButton.Click += SoupButton_Click;
             // 
@@ -56,6 +59,7 @@
             SaladButton.Size = new Size(144, 76);
             SaladButton.TabIndex = 2;
             SaladButton.Text = "Salad";
+            MainToolTip.SetToolTip(SaladButton, "We have a very yummy Salad today.");
             SaladButton.UseVisualStyleBackColor = true;
             SaladButton.Click += SaladButton_Click;
             // 
@@ -66,6 +70,7 @@
             FishButton.Size = new Size(144, 76);
             FishButton.TabIndex = 3;
             FishButton.Text = "Fish";
+            MainToolTip.SetToolTip(FishButton, "This Fish was on fire. Now its on your plate.");
             FishButton.UseVisualStyleBackColor = true;
             FishButton.Click += FishButton_Click;
             // 
@@ -76,6 +81,7 @@
             ExitButton.Size = new Size(144, 76);
             ExitButton.TabIndex = 4;
             ExitButton.Text = "E&xit";
+            MainToolTip.SetToolTip(ExitButton, "Exit the Menu.");
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
             // 
@@ -147,5 +153,6 @@
         private GroupBox ButtonsGroupBox;
         private Label DisplaySpecialLabel;
         private Label DisplayDinnerLabel;
+        private ToolTip MainToolTip;
     }
 }
